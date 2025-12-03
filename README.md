@@ -13,10 +13,13 @@ A modular C program that converts between Decimal (Base 10), Binary (Base 2), Oc
 a)src/
 - main.c # Main program entry
 - converter.c # Conversion logic
+
 b)include/
 - converter.h # Function declarations
+
 c)docs/
 - ProjectReport.pdf # Full documentation
+
 d)README.md
 
 ## Algorithms Used
