@@ -1,0 +1,76 @@
+PROJECT REPORT
+NUMBER CONVERSION SYSTEM
+
+Group Members:
+Student 1: SURYANSH RAGHUWANSHI (Sap id: 590028361)
+Student 2: VINAY REWAR (Sap id: 590028364)
+Professor: MR. VINOD KUMAR
+Course: Programming in C
+
+1. PROBLEM DEFINITION
+Problem Statement:
+Digital computation relies heavily on binary (base 2), while humans use decimal (base 10). 
+Octal (base 8) and hexadecimal (base 16) efficiently represent binary numbers in computing.
+Manual conversion is tedious and error-prone.
+
+Objective:
+Develop automated system for accurate conversions between Decimal, Binary, Octal, Hexadecimal
+with input validation.
+
+2. FLOWCHART
+Decimal to Base N:
+1. Start
+2. Input Decimal D
+3. While D > 0:
+   - R = D % N, D = D / N
+   - Add R to result (reversed)
+4. Output result
+5. Stop
+
+3. ALGORITHM
+Repeated Division Method:
+1. Initialize empty result string
+2. While number > 0:
+   - remainder = number % base
+   - prepend remainder to result
+   - number = number / base
+3. Return reversed result
+
+Example: 44(10) = 101100(2)
+
+4. PROBLEMS FACED
+- Hex input validation (A-F/a-f)
+- Case sensitivity handling
+- Octal/Binary digit constraints (0-7, 0-1)
+Solution: String parsing + uppercase normalization
+
+5. OUTPUT SAMPLE
+--- Number Conversion System Menu ---
+1. Decimal (10) to Other Bases
+2. Binary (2) to Decimal
+3. Octal (8) to Decimal  
+4. Hexadecimal (16) to Decimal
+5. Exit
+-------------------------------------
+Enter your choice (1-5): 1
+Enter Decimal Number: 255
+
+Conversion Results for 255:
+---------------------------------
+Binary (Base 2):    11111111
+Octal (Base 8):     377
+Hexadecimal (Base 16): FF
+---------------------------------
+
+6. FINAL CODE STRUCTURE
+src/
+├── main.c
+└── converter.c
+include/
+└── converter.h
+
+7. COMPILATION
+gcc -o main src/main.c src/converter.c -lm
+./main
+
+END OF REPORT
