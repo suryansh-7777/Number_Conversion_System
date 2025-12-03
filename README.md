@@ -19,6 +19,7 @@ b)include/
 
 c)docs/
 - ProjectReport.pdf # Full documentation
+- projectReport.txt # Text format
 
 d)README.md
 
